@@ -3,7 +3,7 @@ package algorithms.warmup;
 import java.util.Scanner;
 
 public class LonleyInteger {
-private static int SIZE=101;
+/*private static int SIZE=101;
 static int lonelyinteger(int[] a) {
     int N = a.length;
     int[] C = new int[SIZE];
@@ -14,7 +14,13 @@ static int lonelyinteger(int[] a) {
             return i;
         }
     }
-    return -1;
+    return -1;*/
+	 static int lonelyinteger(int[] a) {
+	        int result = 0;
+	        for(int i=0;i<a.length;i++){
+	            result = result ^a[i];
+	        }
+	        return result;
 }
 public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
